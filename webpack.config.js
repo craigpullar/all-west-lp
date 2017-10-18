@@ -28,8 +28,11 @@ var config = [{
     {
       test: /\.js$/,
       exclude: /node_modules/,
-      loaders: ["babel-loader"],
-      include: __dirname + '/client/js',
+      loaders: "babel-loader",
+      options: {
+        presets: ['es2015']
+      },
+      include: __dirname + '/client/js'
 
     },
     {
